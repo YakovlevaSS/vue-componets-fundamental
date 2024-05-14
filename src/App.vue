@@ -1,9 +1,19 @@
 <script setup>
-import CounterButton from "./components/CounterButton.vue"
+import CoffeePlan from "./components/CoffeePlan.vue"
+import {ref} from "vue"
+
+const plans = ref(['The Addict', 'The Curious', 'The Single', 'The Hacke' ])
 </script>
 
 <template>
-<CounterButton></CounterButton>
+  <h2 class="subtitle">
+    We travel the world
+  </h2>
+
+  <div class="plans">
+    <CoffeePlan v-for="plan in plans" :key="plan" :name=plan></CoffeePlan>
+  </div>
+
 </template>
 
 <style scoped>
