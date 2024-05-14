@@ -1,8 +1,5 @@
 <script setup>
-import CoffeePlan from "./components/CoffeePlan.vue"
-import {ref} from "vue"
-
-const plans = ref(['The Addict', 'The Curious', 'The Single', 'The Hacke' ])
+import PlanPicker from "./components/PlanPicker.vue"
 </script>
 
 <template>
@@ -10,9 +7,7 @@ const plans = ref(['The Addict', 'The Curious', 'The Single', 'The Hacke' ])
     We travel the world
   </h2>
 
-  <div class="plans">
-    <CoffeePlan v-for="plan in plans" :key="plan" :name=plan></CoffeePlan>
-  </div>
+<PlanPicker/>
 
 </template>
 
